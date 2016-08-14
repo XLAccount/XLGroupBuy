@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XLCityMenuViewContriller">
+            <connections>
+                <outlet property="coverView" destination="ymH-FU-RvE" id="vks-Bp-vzK"/>
+                <outlet property="mySearchBar" destination="GGJ-HW-vlP" id="XNR-jF-r7A"/>
+                <outlet property="searchDisplayController" destination="eIs-hK-JuL" id="iFB-D6-HtE"/>
+                <outlet property="tableView" destination="win-rC-dLx" id="3aj-Ah-by5"/>
+                <outlet property="view" destination="HtZ-fQ-yTI" id="i0t-BF-W9a"/>
+                <outlet property="viewTopConstraint" destination="Nbz-RP-M4X" id="meC-8s-3iK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="HtZ-fQ-yTI">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6PJ-ia-Y78">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_navigationBar_normal" translatesAutoresizingMaskIntoConstraints="NO" id="BB3-t2-i5Z">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btx-A9-1sj">
+                            <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="62" id="PUz-Dy-D9S"/>
+                            </constraints>
+                            <state key="normal" image="btn_navigation_close"/>
+                            <state key="highlighted" image="btn_navigation_close_hl"/>
+                            <connections>
+                                <action selector="cancleBtn:" destination="-1" eventType="touchUpInside" id="jBQ-ZE-ihz"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="切换城市" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Df-Zd-mxj">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.9675717814" green="0.27281958899999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="btx-A9-1sj" secondAttribute="bottom" id="1J5-Fd-ALS"/>
+                        <constraint firstAttribute="bottom" secondItem="3Df-Zd-mxj" secondAttribute="bottom" id="1Tv-lI-TC2"/>
+                        <constraint firstAttribute="trailing" secondItem="BB3-t2-i5Z" secondAttribute="trailing" id="32v-qx-Fv4"/>
+                        <constraint firstItem="btx-A9-1sj" firstAttribute="top" secondItem="6PJ-ia-Y78" secondAttribute="top" id="5Rq-5g-VbV"/>
+                        <constraint firstItem="btx-A9-1sj" firstAttribute="leading" secondItem="6PJ-ia-Y78" secondAttribute="leading" id="B93-nT-Wib"/>
+                        <constraint firstItem="BB3-t2-i5Z" firstAttribute="leading" secondItem="6PJ-ia-Y78" secondAttribute="leading" id="CY8-cJ-qV9"/>
+                        <constraint firstItem="3Df-Zd-mxj" firstAttribute="leading" secondItem="6PJ-ia-Y78" secondAttribute="leading" id="EwZ-Nu-ADO"/>
+                        <constraint firstAttribute="bottom" secondItem="BB3-t2-i5Z" secondAttribute="bottom" id="XQW-3S-mnd"/>
+                        <constraint firstAttribute="trailing" secondItem="3Df-Zd-mxj" secondAttribute="trailing" id="fAU-W3-eXS"/>
+                        <constraint firstItem="BB3-t2-i5Z" firstAttribute="top" secondItem="6PJ-ia-Y78" secondAttribute="top" id="lAH-Gv-DYo"/>
+                        <constraint firstItem="3Df-Zd-mxj" firstAttribute="top" secondItem="6PJ-ia-Y78" secondAttribute="top" id="ucj-2C-Wd2"/>
+                        <constraint firstAttribute="height" constant="62" id="vtH-1Z-8Eg"/>
+                    </constraints>
+                </view>
+                <searchBar contentMode="redraw" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="GGJ-HW-vlP">
+                    <rect key="frame" x="10" y="82" width="580" height="44"/>
+                    <rect key="contentStretch" x="1" y="1" width="1" height="0.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ZqH-6u-ieK"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="JPZ-7t-BZP"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="win-rC-dLx">
+                    <rect key="frame" x="0.0" y="146" width="600" height="454"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eSb-Kd-JFN"/>
+                        <outlet property="delegate" destination="-1" id="Mrb-2c-4e9"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymH-FU-RvE">
+                    <rect key="frame" x="0.0" y="146" width="600" height="454"/>
+                    <color key="backgroundColor" red="0.44582378926701571" green="0.44582378926701571" blue="0.44582378926701571" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="GGJ-HW-vlP" firstAttribute="leading" secondItem="HtZ-fQ-yTI" secondAttribute="leading" constant="10" id="BYg-tZ-EbN"/>
+                <constraint firstItem="win-rC-dLx" firstAttribute="top" secondItem="GGJ-HW-vlP" secondAttribute="bottom" constant="20" id="CNT-xq-evn"/>
+                <constraint firstAttribute="bottom" secondItem="win-rC-dLx" secondAttribute="bottom" id="Cff-0k-8IE"/>
+                <constraint firstItem="ymH-FU-RvE" firstAttribute="bottom" secondItem="win-rC-dLx" secondAttribute="bottom" id="E0Z-6J-lby"/>
+                <constraint firstItem="6PJ-ia-Y78" firstAttribute="top" secondItem="HtZ-fQ-yTI" secondAttribute="top" id="Nbz-RP-M4X"/>
+                <constraint firstItem="win-rC-dLx" firstAttribute="leading" secondItem="HtZ-fQ-yTI" secondAttribute="leading" id="OX7-F5-c8L"/>
+                <constraint firstAttribute="trailing" secondItem="6PJ-ia-Y78" secondAttribute="trailing" id="PhO-hj-qzy"/>
+                <constraint firstAttribute="trailing" secondItem="win-rC-dLx" secondAttribute="trailing" id="Xpg-8e-1gq"/>
+                <constraint firstAttribute="trailing" secondItem="GGJ-HW-vlP" secondAttribute="trailing" constant="10" id="dsW-Sr-4mv"/>
+                <constraint firstItem="ymH-FU-RvE" firstAttribute="top" secondItem="win-rC-dLx" secondAttribute="top" id="ezv-vh-79y"/>
+                <constraint firstItem="6PJ-ia-Y78" firstAttribute="leading" secondItem="HtZ-fQ-yTI" secondAttribute="leading" id="ieZ-G3-9RV"/>
+                <constraint firstItem="ymH-FU-RvE" firstAttribute="leading" secondItem="win-rC-dLx" secondAttribute="leading" id="rSN-hk-i2N"/>
+                <constraint firstItem="ymH-FU-RvE" firstAttribute="trailing" secondItem="win-rC-dLx" secondAttribute="trailing" id="uME-ds-d09"/>
+                <constraint firstItem="GGJ-HW-vlP" firstAttribute="top" secondItem="6PJ-ia-Y78" secondAttribute="bottom" constant="20" id="xJZ-c2-6cM"/>
+            </constraints>
+            <point key="canvasLocation" x="496" y="-372"/>
+        </view>
+        <searchDisplayController id="eIs-hK-JuL">
+            <connections>
+                <outlet property="delegate" destination="-1" id="5sK-LN-Dcj"/>
+                <outlet property="searchContentsController" destination="-1" id="ZkE-p9-dSN"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="6zd-m2-Joz"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="mT5-ee-4SI"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+    <resources>
+        <image name="bg_login_textfield" width="9" height="11"/>
+        <image name="bg_navigationBar_normal" width="124" height="124"/>
+        <image name="btn_navigation_close" width="30" height="30"/>
+        <image name="btn_navigation_close_hl" width="30" height="30"/>
+    </resources>
+</document>

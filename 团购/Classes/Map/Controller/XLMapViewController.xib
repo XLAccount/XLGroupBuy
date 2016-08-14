@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XLMapViewController">
+            <connections>
+                <outlet property="mapView" destination="g8d-QF-OdR" id="MRQ-bJ-wEv"/>
+                <outlet property="view" destination="iN0-l3-epB" id="b6T-9S-3Ok"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="g8d-QF-OdR">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="xDK-Lg-pP1"/>
+                    </connections>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbO-iQ-v3Q" userLabel="backUserLocation">
+                    <rect key="frame" x="20" y="510" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="AZI-Sw-qQJ"/>
+                        <constraint firstAttribute="height" constant="70" id="fKB-HO-TXF"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="icon_map_location">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="icon_map_location_highlighted"/>
+                    <connections>
+                        <action selector="backUserLocation" destination="-1" eventType="touchUpInside" id="r2E-b2-uMe"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="g8d-QF-OdR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MXz-hJ-o2N"/>
+                <constraint firstItem="g8d-QF-OdR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wu2-DT-Kei"/>
+                <constraint firstAttribute="trailing" secondItem="g8d-QF-OdR" secondAttribute="trailing" id="j9d-wT-ajG"/>
+                <constraint firstAttribute="bottom" secondItem="g8d-QF-OdR" secondAttribute="bottom" id="lXf-Kj-crO"/>
+                <constraint firstAttribute="bottom" secondItem="UbO-iQ-v3Q" secondAttribute="bottom" constant="20" id="nww-6R-VRL"/>
+                <constraint firstItem="UbO-iQ-v3Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="yNg-iY-42v"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_map_location" width="70" height="70"/>
+        <image name="icon_map_location_highlighted" width="70" height="70"/>
+    </resources>
+</document>
