@@ -41,13 +41,6 @@
     return _searchCity;
 }
 
-+ (void)initialize
-{
-    
-    UIBarButtonItem *item = [UIBarButtonItem appearance];
-    item.title = @"取消";
-    [item setTintColor:[UIColor blackColor]];
-}
 
 
 - (void)viewDidLoad
