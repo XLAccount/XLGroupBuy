@@ -289,6 +289,7 @@
                 anno.title = deal.title;
                 anno.subtitle = businesses.name;
                 
+                
 //                如果有值
                 if (self.deals){
                     
@@ -307,6 +308,13 @@
                     [self.mapView setRegion:region animated:YES];
 
                 }
+                    
+                    if (deal.businesses.count == 0){
+                        
+                        anno.title = deal.title;
+                        anno.subtitle = businesses.name;
+                    }
+
                 }
                 
                 // 说明这个大头针已经存在这个数组中（已经显示过了）
