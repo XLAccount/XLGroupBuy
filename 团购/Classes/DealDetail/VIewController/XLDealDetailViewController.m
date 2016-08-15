@@ -61,7 +61,7 @@
         
         
         [noticeLable autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(30, 15, 30, 15) excludingEdge:ALEdgeTop];
-        [noticeLable autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.refundableExpiresButton withOffset:40];
+        [noticeLable autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.refundableExpiresButton withOffset:30];
         
         _noticeLable = noticeLable;
     }
@@ -116,7 +116,9 @@
             
             [self updateLeftContent];
         }else{
-            [MBProgressHUD showError:@"没有找到指定的团购信息"];
+            
+            self.refundableAnyTimeButton.selected = YES;
+            self.refundableExpiresButton.selected = YES;
         }
         
     } failure:^(NSError *error) {
@@ -134,6 +136,7 @@
     self.descLabel.text = self.deal.desc;
     self.currentPriceLabel.text = [NSString stringWithFormat:@"💰%0.2f", [self.deal.current_price floatValue]];
     self.listPriceLabel.text = [NSString stringWithFormat:@"门店价💰%0.2f", [self.deal.list_price floatValue]];
+    
     self.refundableAnyTimeButton.selected = self.deal.restrictions.is_refundable;
     self.refundableExpiresButton.selected = self.deal.restrictions.is_refundable;
     
@@ -271,33 +274,29 @@
 }
 - (IBAction)map {
     
-    XLSingleParam *param = [[XLSingleParam alloc] init];
-    param.deal_id = self.deal.deal_id;
+//    XLSingleParam *param = [[XLSingleParam alloc] init];
+//    param.deal_id = self.deal.deal_id;
+//    
+//    [XLDealTool singDeal:param success:^(XLSingleResult *result) {
+//
+    NSMutableArray *mutable = [NSMutableArray array];
+    [mutable addObject:self.deal];
     
-    [XLDealTool singDeal:param success:^(XLSingleResult *result) {
-        
-        XLMapViewController *mapViewController = [[XLMapViewController alloc] init];
-        mapViewController.deals = result.deals;
-        XLNavController *nav = [[XLNavController alloc] initWithRootViewController:mapViewController];
-        
-        
-        XLDeal *deal = [result.deals lastObject];
         
        
-        if (deal.businesses.count == 0){
+        if (self.deal.businesses.count == 0){
             
             [MBProgressHUD showError:@"本次团购暂时没有相关商家的位置信息"];
             
             return;
+        }else{
+            
+            XLMapViewController *mapViewController = [[XLMapViewController alloc] init];
+            mapViewController.deals = mutable;
+            XLNavController *nav = [[XLNavController alloc] initWithRootViewController:mapViewController];
+            
+            [self presentViewController:nav animated:YES completion:nil];
         }
     
-        [self presentViewController:nav animated:YES completion:nil];
-                
-    } failure:^(NSError *error) {
-        
-        [MBProgressHUD showError:@"没有找到指定的团购信息"];
-
-        
-    }];
    }
 @end
