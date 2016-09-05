@@ -3,3 +3,6 @@
 
 
 iOS开发技术交流群：528243317
+
+
+![image text](http://code4app.com/data/attachment/forum/201608/16/105202w9nknfcfdy6q34hd.gif)
