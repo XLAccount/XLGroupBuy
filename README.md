@@ -5,8 +5,5 @@
 iOS开发技术交流群：528243317
 
 
-![image](http://code4app.com/data/attachment/forum/201608/16/105202w9nknfcfdy6q34hd.gif)
+![image](https://github.com/aiqiuqiu/Tuan/blob/master/Tuan/1.gif)
 
-![image text](http://code4app.com/data/attachment/forum/201606/02/122733k3v553wnmewsn53u.gif)
-
-![image text](http://www.code4app.com/data/attachment/forum/201608/16/105202w9nknfcfdy6q34hd.gif)
