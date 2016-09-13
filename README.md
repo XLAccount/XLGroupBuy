@@ -8,4 +8,4 @@ iOS开发技术交流群：528243317
 ![image](https://github.com/aiqiuqiu/Tuan/blob/master/Tuan/1.gif)
 
 
-![image](http://upload-images.jianshu.io/upload_images/1038348-51c20b58577a48f1.gif?imageMogr2/auto-orient/strip)
+![image](http://upload-images.jianshu.io/upload_images/1038348-51c20b58577a48f1.gif)
