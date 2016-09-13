@@ -8,4 +8,4 @@ iOS开发技术交流群：528243317
 ![image](https://github.com/aiqiuqiu/Tuan/blob/master/Tuan/1.gif)
 
 
-![image](http://upload-images.jianshu.io/upload_images/1038348-51c20b58577a48f1.gif)
+![image](http://a3.qpic.cn/psb?/V145J2jn29HOci/8DLYM2QFUichr3ZlNxc2qOTUlsC5IwOSEMbdTlWekl8!/b/dAoBAAAAAAAA&bo=aAHgAQAAAAACkj4!&rf=viewer_4)
